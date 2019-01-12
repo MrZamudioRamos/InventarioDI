@@ -45,6 +45,17 @@
                   </TableView>
                </content>
             </Tab>
+            <Tab text="Marcas">
+               <content>
+                  <TableView prefHeight="342.0" prefWidth="909.0">
+                     <columns>
+                        <TableColumn prefWidth="165.0" text="ID_MARCA" />
+                        <TableColumn minWidth="0.0" prefWidth="256.0" text="NOMBRE" />
+                        <TableColumn minWidth="0.0" prefWidth="217.0" text="DESCRIPCIÓN" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
          </tabs>
       </TabPane>
       <Button layoutX="168.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="72.0" prefWidth="158.0" text="ELIMINAR" />
