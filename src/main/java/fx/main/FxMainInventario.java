@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -24,16 +25,16 @@ public class FxMainInventario extends Application {
             throws IOException {
 
         FXMLLoader loaderMenu = new FXMLLoader(
-                getClass().getResource("/fxml/FXMLPantallaPrincipal.fxml"));
-        BorderPane root = loaderMenu.load();
+                getClass().getResource("/fxml/FXMLLogin.fxml"));
+        AnchorPane root = loaderMenu.load();
 
         FXMLLoginController inicio = loaderMenu.getController();
 
         inicio.setMyStage(primaryStage);
         Scene scene = new Scene(root);
 
-        primaryStage.getIcons().add(new Image("/images/icon.png"));
-        primaryStage.setTitle("BUSCAMINAS");
+        //primaryStage.getIcons().add(new Image("/images/icon.png"));
+        primaryStage.setTitle("Inventariador");
         primaryStage.setScene(scene);
         primaryStage.show();
 
