@@ -1,5 +1,6 @@
 package fx.main;
 
+import fx.controllers.FXMLLoginController;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -7,6 +8,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -25,7 +27,7 @@ public class FxMainInventario extends Application {
                 getClass().getResource("/fxml/FXMLPantallaPrincipal.fxml"));
         BorderPane root = loaderMenu.load();
 
-        FXML inicio = loaderMenu.getController();
+        FXMLLoginController inicio = loaderMenu.getController();
 
         inicio.setMyStage(primaryStage);
         Scene scene = new Scene(root);

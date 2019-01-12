@@ -8,6 +8,7 @@ package fx.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -16,9 +17,12 @@ import javafx.fxml.Initializable;
  */
 public class FXMLLoginController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    public void setMyStage(Stage myStage) {
+        this.myStage = myStage;
+    }
+
+    private Stage myStage;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
