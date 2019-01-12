@@ -58,7 +58,7 @@
             </Tab>
          </tabs>
       </TabPane>
-      <Button layoutX="168.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="72.0" prefWidth="158.0" text="ELIMINAR" />
+      <Button layoutX="168.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="72.0" prefWidth="158.0" text="DAR DE BAJA" />
       <Button layoutX="437.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickActualizar" prefHeight="72.0" prefWidth="158.0" text="ACTUALIZAR" />
       <Label layoutX="41.0" layoutY="44.0" prefHeight="29.0" prefWidth="85.0" text="DATOS:">
          <font>
