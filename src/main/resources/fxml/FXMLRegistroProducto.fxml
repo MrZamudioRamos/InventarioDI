@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -10,17 +11,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="fx.controllers.FXMLRegistroProductoController">
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="636.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.FXMLRegistroProductoController">
     <stylesheets>
         <URL value="@/styles/fxmlregistroproducto.css" />
     </stylesheets>
     <children>
-      <TextField layoutX="210.0" layoutY="83.0" prefHeight="3.0" prefWidth="291.0" />
-      <TextField layoutX="210.0" layoutY="284.0" prefHeight="0.0" prefWidth="291.0" />
-      <TextField layoutX="210.0" layoutY="214.0" prefHeight="0.0" prefWidth="291.0" />
-      <TextField layoutX="210.0" layoutY="182.0" prefHeight="0.0" prefWidth="291.0" />
-      <TextField layoutX="210.0" layoutY="146.0" prefHeight="0.0" prefWidth="291.0" />
-      <TextField layoutX="210.0" layoutY="114.0" prefHeight="0.0" prefWidth="291.0" />
+      <TextField fx:id="fxNombre" layoutX="210.0" layoutY="83.0" prefHeight="3.0" prefWidth="291.0" />
+      <TextField fx:id="fxDescripcion" layoutX="210.0" layoutY="214.0" prefHeight="0.0" prefWidth="291.0" />
+      <TextField fx:id="fxModelo" layoutX="210.0" layoutY="182.0" prefHeight="0.0" prefWidth="291.0" />
+      <TextField fx:id="fxCategoria" layoutX="210.0" layoutY="114.0" prefHeight="0.0" prefWidth="291.0" />
       <Label layoutX="121.0" layoutY="83.0" prefHeight="25.0" prefWidth="63.0" text="Nombre">
          <font>
             <Font name="Carlito" size="12.0" />
@@ -30,7 +29,7 @@
       <Label layoutX="121.0" layoutY="182.0" prefHeight="25.0" prefWidth="63.0" text="Modelo" />
       <Label layoutX="121.0" layoutY="214.0" prefHeight="25.0" prefWidth="63.0" text="Descripción" />
       <Label layoutX="121.0" layoutY="247.0" prefHeight="25.0" prefWidth="63.0" text="Ubicación" />
-      <Label layoutX="112.0" layoutY="279.0" prefHeight="25.0" prefWidth="80.0" text="Responsables" />
+      <Label layoutX="112.0" layoutY="279.0" prefHeight="25.0" prefWidth="80.0" text="Responsable" />
       <Label layoutX="104.0" layoutY="396.0" prefHeight="25.0" prefWidth="80.0" text="Estado" />
       <Label layoutX="121.0" layoutY="114.0" prefHeight="25.0" prefWidth="63.0" text="Categoría" />
       <RadioButton layoutX="166.0" layoutY="400.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Almacenado">
@@ -38,17 +37,19 @@
             <ToggleGroup fx:id="estado" />
          </toggleGroup></RadioButton>
       <RadioButton layoutX="268.0" layoutY="400.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Vendido" toggleGroup="$estado" />
-      <PasswordField layoutX="210.0" layoutY="247.0" prefHeight="25.0" prefWidth="291.0" />
+      <PasswordField fx:id="fxUbicacion" layoutX="210.0" layoutY="247.0" prefHeight="25.0" prefWidth="291.0" />
       <Label layoutX="275.0" layoutY="22.0" prefHeight="53.0" prefWidth="161.0" text="Producto:" textAlignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
       <RadioButton layoutX="356.0" layoutY="400.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Donado" toggleGroup="$estado" />
-      <DatePicker layoutX="210.0" layoutY="320.0" prefHeight="17.0" prefWidth="313.0" />
-      <DatePicker layoutX="210.0" layoutY="359.0" prefHeight="17.0" prefWidth="313.0" />
+      <DatePicker fx:id="fxFechaEntrada" layoutX="210.0" layoutY="320.0" prefHeight="17.0" prefWidth="313.0" />
+      <DatePicker fx:id="fxFechaSalida" layoutX="210.0" layoutY="359.0" prefHeight="17.0" prefWidth="313.0" />
       <Label layoutX="121.0" layoutY="359.0" prefHeight="25.0" prefWidth="63.0" text="F-Salida" />
       <Label layoutX="121.0" layoutY="320.0" prefHeight="25.0" prefWidth="63.0" text="F-Entrada" />
       <RadioButton layoutX="436.0" layoutY="400.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Modificado" toggleGroup="$estado" />
+      <ComboBox fx:id="fxMarca" layoutX="210.0" layoutY="146.0" prefHeight="25.0" prefWidth="291.0" />
+      <ComboBox fx:id="fxResponsable" layoutX="210.0" layoutY="279.0" prefHeight="25.0" prefWidth="291.0" />
    </children>
 </AnchorPane>

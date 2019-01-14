@@ -20,6 +20,10 @@ public class FXMLLoginController implements Initializable {
     public void setMyStage(Stage myStage) {
         this.myStage = myStage;
     }
+    
+    public void clickEntrar(){
+        
+    }
 
     private Stage myStage;
     
