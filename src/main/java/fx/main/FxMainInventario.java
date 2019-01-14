@@ -1,6 +1,7 @@
 package fx.main;
 
 import fx.controllers.FXMLLoginController;
+import fx.controllers.FXMLPrincipalController;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -25,15 +26,15 @@ public class FxMainInventario extends Application {
             throws IOException {
 
         FXMLLoader loaderMenu = new FXMLLoader(
-                getClass().getResource("/fxml/FXMLLogin.fxml"));
-       AnchorPane  root = loaderMenu.load();
+                getClass().getResource("/fxml/FXMLPrincipal.fxml"));
+        BorderPane root = loaderMenu.load();
 
-        FXMLLoginController inicio = loaderMenu.getController();
+        FXMLPrincipalController inicio = loaderMenu.getController();
 
         inicio.setMyStage(primaryStage);
         Scene scene = new Scene(root);
 
-        //primaryStage.getIcons().add(new Image("/images/icon.png"));
+        
         primaryStage.setTitle("Inventariador");
         primaryStage.setScene(scene);
         primaryStage.show();
