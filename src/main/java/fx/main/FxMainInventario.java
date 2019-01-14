@@ -26,7 +26,7 @@ public class FxMainInventario extends Application {
 
         FXMLLoader loaderMenu = new FXMLLoader(
                 getClass().getResource("/fxml/FXMLLogin.fxml"));
-        AnchorPane root = loaderMenu.load();
+       AnchorPane  root = loaderMenu.load();
 
         FXMLLoginController inicio = loaderMenu.getController();
 

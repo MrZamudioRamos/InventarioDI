@@ -1,38 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171"
-            fx:controller="fx.controllers.FXMLLoginController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.FXMLLoginController">
     <children>
-      <PasswordField fx:id="fxContrasenia" layoutX="221.0" layoutY="322.0" prefHeight="25.0" prefWidth="291.0" />
-      <Label layoutX="260.0" layoutY="109.0" prefHeight="76.0" prefWidth="189.0" text="INICIAR SESIÓN" textAlignment="CENTER">
+      <PasswordField fx:id="fxContrasenia" layoutX="200.0" layoutY="235.0" prefHeight="25.0" prefWidth="291.0" />
+      <Label layoutX="206.0" layoutY="63.0" prefHeight="76.0" prefWidth="189.0" text="INICIAR SESIÓN" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Separator layoutX="2.0" layoutY="411.0" prefHeight="0.0" prefWidth="732.0" />
-      <Separator layoutX="198.0" layoutY="1.0" orientation="VERTICAL" prefHeight="581.0" prefWidth="0.0" />
-      <Separator layoutX="524.0" layoutY="6.0" orientation="VERTICAL" prefHeight="581.0" prefWidth="0.0" />
-      <Separator layoutX="6.0" layoutY="106.0" prefHeight="0.0" prefWidth="732.0" />
-      <TextField fx:id="fxUsuario" layoutX="221.0" layoutY="242.0" prefHeight="25.0" prefWidth="291.0" />
-      <Label layoutX="100.0" layoutY="241.0" prefHeight="25.0" prefWidth="72.0" text="Usuario">
+      <TextField fx:id="fxUsuario" layoutX="200.0" layoutY="161.0" prefHeight="25.0" prefWidth="291.0" />
+      <Label layoutX="85.0" layoutY="160.0" prefHeight="25.0" prefWidth="72.0" text="Usuario">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="85.0" layoutY="321.0" prefHeight="27.0" prefWidth="102.0" text="Contraseña">
+      <Label layoutX="85.0" layoutY="234.0" prefHeight="27.0" prefWidth="102.0" text="Contraseña">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="315.0" layoutY="446.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" text="ENTRAR" />
+      <Button layoutX="245.0" layoutY="304.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" text="ENTRAR" />
    </children>
 </AnchorPane>

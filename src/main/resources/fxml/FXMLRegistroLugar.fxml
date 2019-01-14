@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.FXMLRegistroLugarController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="fx.controllers.FXMLRegistroLugarController">
     <stylesheets>
-        <URL value="@/styles/fxmlregistro.css"/>
+        <URL value="@/styles/fxmlregistro.css" />
     </stylesheets>
      <children>
       <TextField layoutX="210.0" layoutY="83.0" prefHeight="3.0" prefWidth="291.0" />
@@ -29,25 +31,24 @@
       <Label layoutX="121.0" layoutY="214.0" prefHeight="25.0" prefWidth="63.0" text="Descripción" />
       <Label layoutX="121.0" layoutY="247.0" prefHeight="25.0" prefWidth="63.0" text="Ubicación" />
       <Label layoutX="112.0" layoutY="279.0" prefHeight="25.0" prefWidth="80.0" text="Responsables" />
-      <Label layoutX="112.0" layoutY="417.0" prefHeight="25.0" prefWidth="80.0" text="Estado" />
+      <Label layoutX="113.0" layoutY="391.0" prefHeight="25.0" prefWidth="80.0" text="Estado" />
       <Label layoutX="121.0" layoutY="114.0" prefHeight="25.0" prefWidth="63.0" text="Categoría" />
-      <RadioButton layoutX="240.0" layoutY="421.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Almacenado" />
-      <RadioButton layoutX="370.0" layoutY="421.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Vendido" />
+      <RadioButton layoutX="193.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Almacenado">
+         <toggleGroup>
+            <ToggleGroup fx:id="estado" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="296.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Vendido" toggleGroup="$estado" />
       <PasswordField layoutX="210.0" layoutY="247.0" prefHeight="25.0" prefWidth="291.0" />
       <Label layoutX="275.0" layoutY="22.0" prefHeight="53.0" prefWidth="161.0" text="Lugar:" textAlignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Separator layoutX="2.0" layoutY="411.0" prefHeight="0.0" prefWidth="732.0" />
-      <Separator layoutX="198.0" layoutY="1.0" orientation="VERTICAL" prefHeight="581.0" prefWidth="0.0" />
-      <Separator layoutX="524.0" layoutY="6.0" orientation="VERTICAL" prefHeight="581.0" prefWidth="0.0" />
-      <Separator layoutX="4.0" layoutY="74.0" prefHeight="0.0" prefWidth="732.0" />
-      <RadioButton layoutX="240.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Donado" />
+      <RadioButton layoutX="472.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Donado" toggleGroup="$estado" />
       <DatePicker layoutX="210.0" layoutY="320.0" prefHeight="17.0" prefWidth="313.0" />
       <DatePicker layoutX="210.0" layoutY="359.0" prefHeight="17.0" prefWidth="313.0" />
       <Label layoutX="121.0" layoutY="359.0" prefHeight="25.0" prefWidth="63.0" text="F-Salida" />
       <Label layoutX="121.0" layoutY="320.0" prefHeight="25.0" prefWidth="63.0" text="F-Entrada" />
-      <RadioButton layoutX="370.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Modificado" />
+      <RadioButton layoutX="376.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Modificado" toggleGroup="$estado" />
    </children>
 </AnchorPane>
