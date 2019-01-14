@@ -23,6 +23,13 @@ public class FXMLLoginController implements Initializable {
 
     private Stage myStage;
     
+    private FXMLPrincipalController principal;
+    
+    public void setPrincipal(FXMLPrincipalController principal) {
+        this.principal = principal;
+    }
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
