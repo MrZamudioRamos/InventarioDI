@@ -1,0 +1,9 @@
+## YAML Template.
+---
+
+driverDB: com.mysql.cj.jdbc.Driver
+urlDB: localhost:3306/inventario?serverTimeZone=UTC
+userDB: root
+passDB: root
+
+##migration wizard , database -ssql, connection odbc source, open odbc - sql native client 11, server - localhost, login pass , 
