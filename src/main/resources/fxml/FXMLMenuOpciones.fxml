@@ -12,11 +12,11 @@
         <URL value="@/styles/fxmlmenuopciones.css" />
     </stylesheets>
    <children>
-      <Button layoutX="593.0" layoutY="278.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="MODIFICAR PRODUCTO" />
-      <Button layoutX="530.0" layoutY="515.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="SALIR" />
-      <Button layoutX="178.0" layoutY="515.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="CERRAR SESIÓN" />
-      <Button layoutX="107.0" layoutY="233.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="REGISTRAR USUARIO" />
-      <Button layoutX="593.0" layoutY="235.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="REGISTRAR PRODUCTO" />
+      <Button fx:id="fxEditProducts" layoutX="593.0" layoutY="278.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="MODIFICAR PRODUCTO" />
+      <Button fx:id="fxExit" layoutX="530.0" layoutY="515.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="SALIR" />
+      <Button fx:id="fxCloseSession" layoutX="178.0" layoutY="515.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="CERRAR SESIÓN" />
+      <Button fx:id="fxAddUser" layoutX="107.0" layoutY="233.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="REGISTRAR USUARIO" />
+      <Button fx:id="fxAddProducts" layoutX="593.0" layoutY="235.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="REGISTRAR PRODUCTO" />
       <Label layoutX="301.0" layoutY="74.0" prefHeight="47.0" prefWidth="179.0" text="BIENVENIDO" textAlignment="CENTER">
          <font>
             <Font name="Arial Black" size="24.0" />
@@ -32,7 +32,7 @@
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Button layoutX="107.0" layoutY="276.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="MODIFICAR USUARIO" />
+      <Button fx:id="fxEditUser" layoutX="107.0" layoutY="276.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="MODIFICAR USUARIO" />
       <Text layoutX="674.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Producto">
          <font>
             <Font name="System Bold Italic" size="20.0" />
@@ -43,10 +43,10 @@
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Button layoutX="144.0" layoutY="401.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="LISTAR LUGAR" />
-      <Button layoutX="107.0" layoutY="189.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="LISTAR USUARIOS" />
-      <Button layoutX="593.0" layoutY="189.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="LISTAR PRODUCTOS" />
-      <Button layoutX="383.0" layoutY="401.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="187.0" text="REGISTRAR LUGAR" />
-      <Button layoutX="630.0" layoutY="401.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="187.0" text="MODIFICAR LUGAR" />
+      <Button fx:id="fxListPlace" layoutX="144.0" layoutY="401.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="LISTAR LUGAR" />
+      <Button fx:id="fxListUser" layoutX="107.0" layoutY="189.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="LISTAR USUARIOS" />
+      <Button fx:id="fxListProducts" layoutX="593.0" layoutY="189.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="246.0" text="LISTAR PRODUCTOS" />
+      <Button fx:id="fxAddPlace" layoutX="383.0" layoutY="401.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="187.0" text="REGISTRAR LUGAR" />
+      <Button fx:id="fxEditPlace" layoutX="630.0" layoutY="401.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="187.0" text="MODIFICAR LUGAR" />
    </children>
 </AnchorPane>

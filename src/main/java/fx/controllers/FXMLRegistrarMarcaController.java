@@ -5,19 +5,29 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
-public class FXMLPantallaUsuariosController implements Initializable {
-
+public class FXMLRegistrarMarcaController implements Initializable {
+    
+    
     @FXML
-    private Button fxRefresh;
+    private TextField fxNombre;
     @FXML
-    private Button fxDelete;
+    private TextField fxDescripcion;
     @FXML
-    private Button fxBack;
-
+    private Button fxCrear;
+    
+    
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }    
+    
+    public void clickCrear(){
+        
     }
 
+    
 }

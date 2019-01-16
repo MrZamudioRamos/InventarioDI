@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="961.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="fx.controllers.FXMLPantallaUsuariosController">
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="961.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.FXMLPantallaUsuariosController">
     <stylesheets>
         <URL value="@/styles/fxmlpantallausuarios.css" />
     </stylesheets>
@@ -27,14 +27,14 @@
             <Font name="Consolas Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="531.0" layoutY="209.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="269.0" text="ACTUALIZAR " />
+      <Button fx:id="fxRefresh" layoutX="531.0" layoutY="209.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="269.0" text="ACTUALIZAR " />
       <Label layoutX="615.0" layoutY="120.0" prefHeight="32.0" prefWidth="115.0" text="OPCIONES">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="531.0" layoutY="333.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="269.0" text="ELIMINAR " />
-      <Button layoutX="603.0" layoutY="467.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="125.0" text="VOLVER" />
+      <Button fx:id="fxDelete" layoutX="531.0" layoutY="333.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="269.0" text="ELIMINAR " />
+      <Button fx:id="fxBack" layoutX="603.0" layoutY="467.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="125.0" text="VOLVER" />
       <Separator layoutX="504.0" layoutY="173.0" prefHeight="4.0" prefWidth="322.0" />
       <Separator layoutX="504.0" layoutY="411.0" prefHeight="4.0" prefWidth="322.0" />
       <Separator layoutX="502.0" layoutY="173.0" orientation="VERTICAL" prefHeight="240.0" prefWidth="5.0" />

@@ -8,6 +8,8 @@ package fx.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -31,6 +33,17 @@ public class FXMLLoginController implements Initializable {
     
     public void setPrincipal(FXMLPrincipalController principal) {
         this.principal = principal;
+    }
+    
+    //MÉTODOS
+    
+    
+    //variables Login
+    private TextField fxUsuario;
+    private PasswordField fxContrasenia;
+    public void clickLogin(){
+        
+        
     }
     
     
