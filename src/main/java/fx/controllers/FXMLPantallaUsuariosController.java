@@ -25,5 +25,6 @@ public class FXMLPantallaUsuariosController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
     
 }

@@ -23,5 +23,5 @@ public class FXMLRegistroProductoController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+
 }

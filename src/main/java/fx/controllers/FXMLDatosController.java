@@ -23,5 +23,17 @@ public class FXMLDatosController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    public void clickEliminar(){
+        
+    }
+    
+    public void clickActualizar(){
+        
+    }
+    
+    public void clickVolver(){
+        
+    }
     
 }

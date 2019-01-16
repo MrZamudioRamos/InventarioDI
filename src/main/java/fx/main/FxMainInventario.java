@@ -1,18 +1,10 @@
 package fx.main;
 
-import fx.controllers.FXMLLoginController;
-import fx.controllers.FXMLPrincipalController;
 import java.io.IOException;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -29,12 +21,7 @@ public class FxMainInventario extends Application {
                 getClass().getResource("/fxml/FXMLPrincipal.fxml"));
         BorderPane root = loaderMenu.load();
 
-        FXMLPrincipalController inicio = loaderMenu.getController();
-
-        inicio.setMyStage(primaryStage);
-        Scene scene = new Scene(root);
-
-        
+        Scene scene = new Scene(root);    
         primaryStage.setTitle("Inventariador");
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author dam2
  */
-public class FXMLRegistroLugarController implements Initializable {
+public class FXMLRegistrarMarcaController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -23,6 +23,10 @@ public class FXMLRegistroLugarController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    public void clickCrear(){
+        
+    }
 
     
 }

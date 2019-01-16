@@ -10,10 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="961.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.FXMLDatosController">
-    <stylesheets>
-        <URL value="@/styles/fxmldatos.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="961.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="fx.controllers.FXMLDatosController">
+
     <children>
       <TabPane layoutX="41.0" layoutY="99.0">
          <tabs>
