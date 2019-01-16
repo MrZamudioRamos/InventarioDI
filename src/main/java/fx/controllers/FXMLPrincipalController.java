@@ -8,6 +8,8 @@ import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -34,7 +36,7 @@ public class FXMLPrincipalController implements Initializable {
             FXMLLoader loaderMenu = new FXMLLoader(
                     getClass().getResource(
                             "/fxml/FXMLLogin.fxml"));
-            pantallaLogin = loaderMenu.load();
+            pantallaLogin = loaderMenu.load(); 
             logincontroller
                     = loaderMenu.getController();
             logincontroller.setPrincipal(this);
@@ -51,11 +53,24 @@ public class FXMLPrincipalController implements Initializable {
         fxRoot.setCenter(pantallaLogin);
 
     }
+    
+    //MÉTODOS
+    
+    
+    //variables
+    private TextField fxUsuario;
+    private PasswordField fxContrasenia;
+    public void clickLogin(){
+        
+        
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         precargarPantallaLogin();
-
+        
+        
+        
         cargarPantallaLogin();
 
     }
