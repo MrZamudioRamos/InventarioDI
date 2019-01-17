@@ -11,11 +11,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-<<<<<<< HEAD
-                  <MenuItem mnemonicParsing="false" onAction="#clickOpciones" text="Opciones" />             
-=======
-                  <MenuItem mnemonicParsing="false" text="Opciones" onAction="#clickOpciones" />             
->>>>>>> origin/master
+                  <MenuItem mnemonicParsing="false" onAction="#clickOpciones" text="Opciones" />      
             </items>
           </Menu>
         </menus>
