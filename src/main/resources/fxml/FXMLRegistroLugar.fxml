@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -12,8 +11,8 @@
 
 <AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="627.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.FXMLRegistroLugarController">
      <children>
-      <TextField layoutX="205.0" layoutY="137.0" prefHeight="3.0" prefWidth="291.0" />
-      <TextField layoutX="205.0" layoutY="189.0" prefHeight="0.0" prefWidth="291.0" />
+      <TextField fx:id="fxNombre" layoutX="205.0" layoutY="137.0" prefHeight="3.0" prefWidth="291.0" />
+      <TextField fx:id="fxDescripcion" layoutX="205.0" layoutY="189.0" prefHeight="0.0" prefWidth="291.0" />
       <Label layoutX="105.0" layoutY="137.0" prefHeight="25.0" prefWidth="63.0" text="Nombre">
          <font>
             <Font name="Carlito" size="12.0" />
@@ -21,18 +20,18 @@
       </Label>
       <Label layoutX="98.0" layoutY="189.0" prefHeight="25.0" prefWidth="63.0" text="Descripción" />
       <Label layoutX="98.0" layoutY="247.0" prefHeight="25.0" prefWidth="63.0" text="Ubicación" />
-      <RadioButton layoutX="193.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Almacenado">
+      <RadioButton fx:id="fxAlmacenado" layoutX="193.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Almacenado">
          <toggleGroup>
             <ToggleGroup fx:id="estado" />
          </toggleGroup></RadioButton>
-      <PasswordField layoutX="205.0" layoutY="247.0" prefHeight="25.0" prefWidth="291.0" />
+      <TextField fx:id="fxUbicacion" layoutX="205.0" layoutY="247.0" prefHeight="25.0" prefWidth="291.0" />
       <Label layoutX="211.0" layoutY="37.0" prefHeight="53.0" prefWidth="206.0" text="UBICACIÓN" textAlignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <DatePicker layoutX="205.0" layoutY="320.0" prefHeight="17.0" prefWidth="313.0" />
+      <DatePicker fx:id="fxFecha" layoutX="205.0" layoutY="320.0" prefHeight="17.0" prefWidth="313.0" />
       <Label layoutX="98.0" layoutY="320.0" prefHeight="25.0" prefWidth="63.0" text="F-Entrada" />
-      <RadioButton layoutX="376.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Modificado" toggleGroup="$estado" />
+      <RadioButton fx:id="fxModificado" layoutX="376.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Modificado" toggleGroup="$estado" />
    </children>
 </AnchorPane>

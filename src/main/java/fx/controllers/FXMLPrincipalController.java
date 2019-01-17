@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.MenuBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -15,6 +16,10 @@ public class FXMLPrincipalController implements Initializable {
 
     @FXML
     protected BorderPane fxRoot;
+
+    @FXML
+    private MenuBar fxMenu;
+
     private AnchorPane pantallaLogin;
     private FXMLLoginController logincontroller;
     private AnchorPane pantallaDatos;
@@ -61,6 +66,7 @@ public class FXMLPrincipalController implements Initializable {
             pantallaDatos = loaderMenu.load();
             datosController
                     = loaderMenu.getController();
+            datosController.setPrincipal(this);
         } catch (IOException ex) {
 
             Logger.getLogger(FXMLDatosController.class.getName()).log(Level.SEVERE, null, ex);
@@ -77,6 +83,7 @@ public class FXMLPrincipalController implements Initializable {
             pantallaOpciones = loaderMenu.load();
             opcionesController
                     = loaderMenu.getController();
+            opcionesController.setPrincipal(this);
 
         } catch (IOException ex) {
 
@@ -94,6 +101,7 @@ public class FXMLPrincipalController implements Initializable {
             pantallaUsuario = loaderMenu.load();
             usuarioController
                     = loaderMenu.getController();
+            usuarioController.setPrincipal(this);
 
         } catch (IOException ex) {
 
@@ -111,6 +119,7 @@ public class FXMLPrincipalController implements Initializable {
             pantallaMarca = loaderMenu.load();
             marcaController
                     = loaderMenu.getController();
+            marcaController.setPrincipal(this);
 
         } catch (IOException ex) {
 
@@ -128,6 +137,7 @@ public class FXMLPrincipalController implements Initializable {
             pantallaRegistroLugar = loaderMenu.load();
             registroLugarController
                     = loaderMenu.getController();
+            registroLugarController.setPrincipal(this);
 
         } catch (IOException ex) {
 
@@ -145,6 +155,7 @@ public class FXMLPrincipalController implements Initializable {
             pantallaRegistroProducto = loaderMenu.load();
             registroProductoController
                     = loaderMenu.getController();
+            registroProductoController.setPrincipal(this);
 
         } catch (IOException ex) {
 
@@ -162,6 +173,7 @@ public class FXMLPrincipalController implements Initializable {
             pantallaRegistroUsuario = loaderMenu.load();
             registroUsuarioController
                     = loaderMenu.getController();
+            registroUsuarioController.setPrincipal(this);
         } catch (IOException ex) {
             Logger.getLogger(FXMLRegistroUsuarioController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -171,45 +183,54 @@ public class FXMLPrincipalController implements Initializable {
     @FXML
     public void cargarPantallaLogin() {
         fxRoot.setCenter(pantallaLogin);
+        fxMenu.setVisible(false);
     }
     
     @FXML
     public void cargarPantallaDatos() {
         fxRoot.setCenter(pantallaDatos);
+        fxMenu.setVisible(true);
     }
     
     @FXML
     public void cargarPantallaOpciones() {
         fxRoot.setCenter(pantallaOpciones);
+        fxMenu.setVisible(true);
     }
     
     @FXML
     public void cargarPantallaUsuario() {
         fxRoot.setCenter(pantallaUsuario);
+        fxMenu.setVisible(true);
     }
     
     @FXML
     public void cargarPantallaMarca() {
         fxRoot.setCenter(pantallaMarca);
+        fxMenu.setVisible(true);
     }
     
     @FXML
     public void cargarPantallaLugar() {
         fxRoot.setCenter(pantallaRegistroLugar);
+        fxMenu.setVisible(true);
     }
     
     @FXML
     public void cargarPantallaProducto() {
         fxRoot.setCenter(pantallaRegistroProducto);
+        fxMenu.setVisible(true);
     }
     
     @FXML
     public void cargarPantallaRegistroUsuario() {
         fxRoot.setCenter(pantallaRegistroUsuario);
+        fxMenu.setVisible(true);
     }
     
     public void clickOpciones(){
         cargarPantallaOpciones();
+        fxMenu.setVisible(true);
     }
     
 

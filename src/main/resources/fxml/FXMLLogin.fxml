@@ -26,6 +26,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="245.0" layoutY="304.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" text="ENTRAR" />
+      <Button layoutX="245.0" layoutY="304.0" mnemonicParsing="false" onAction="#clickEntrar" prefHeight="49.0" prefWidth="112.0" text="ENTRAR" />
    </children>
 </AnchorPane>

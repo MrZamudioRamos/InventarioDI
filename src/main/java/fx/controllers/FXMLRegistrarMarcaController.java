@@ -9,7 +9,11 @@ import javafx.scene.control.TextField;
 
 public class FXMLRegistrarMarcaController implements Initializable {
     
+    private FXMLPrincipalController principal;
     
+    public void setPrincipal(FXMLPrincipalController principal) {
+        this.principal = principal;
+    }
     @FXML
     private TextField fxNombre;
     @FXML

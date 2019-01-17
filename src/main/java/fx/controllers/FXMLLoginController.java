@@ -7,7 +7,9 @@ package fx.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -18,13 +20,9 @@ import javafx.stage.Stage;
  * @author carlu
  */
 public class FXMLLoginController implements Initializable {
-
+    
     public void setMyStage(Stage myStage) {
         this.myStage = myStage;
-    }
-    
-    public void clickEntrar(){
-        
     }
 
     private Stage myStage;
@@ -37,19 +35,19 @@ public class FXMLLoginController implements Initializable {
     
     //MÉTODOS
     
-    
+        
     //variables Login
     private TextField fxUsuario;
     private PasswordField fxContrasenia;
-    public void clickLogin(){
-        
-        
+
+  
+    public void clickEntrar() {
+        principal.cargarPantallaOpciones();
     }
-    
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

@@ -14,7 +14,12 @@ public class FXMLPantallaUsuariosController implements Initializable {
     private Button fxDelete;
     @FXML
     private Button fxBack;
-
+    
+    private FXMLPrincipalController principal;
+    
+    public void setPrincipal(FXMLPrincipalController principal) {
+        this.principal = principal;
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

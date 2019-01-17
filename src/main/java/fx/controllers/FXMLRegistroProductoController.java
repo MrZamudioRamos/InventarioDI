@@ -19,6 +19,13 @@ public class FXMLRegistroProductoController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
+    private FXMLPrincipalController principal;
+    
+    public void setPrincipal(FXMLPrincipalController principal) {
+        this.principal = principal;
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

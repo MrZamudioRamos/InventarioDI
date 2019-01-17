@@ -4,37 +4,73 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.PasswordField;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
+/**
+ * FXML Controller class
+ *
+ * @author dam2
+ */
+
 public class FXMLRegistroUsuarioController implements Initializable {
+
+    /**
+     * Initializes the controller class.
+     */
     
+    private FXMLPrincipalController principal;
+    
+    public void setPrincipal(FXMLPrincipalController principal) {
+        this.principal = principal;
+    }
     
     @FXML
     private TextField fxNombre;
+    
     @FXML
-    private TextField fxApellidos;
+    private TextField fxDescripcion;
+    
     @FXML
-    private TextField fxTelefono;
+    private TextField fxModelo;
+    
+    @FXML
+    private TextField fxCategoria;
+    
     @FXML
     private TextField fxUbicacion;
+    
     @FXML
-    private TextField fxMail;
+    private ComboBox fxMarca;
+    
     @FXML
-    private PasswordField fxContrasenia;
+    private ComboBox fxResponsable;
+    
     @FXML
-    private TextField fxDni;
+    private DatePicker fxFechaEntrada;
+    
     @FXML
-    private RadioButton fxAdministrador;
+    private DatePicker fxFechaSalida;
+    
     @FXML
-    private RadioButton fxUsuarioNormal;
+    private RadioButton fxAlmacenado;
+    
     @FXML
-    private RadioButton fxInventariador;
+    private RadioButton fxVendido;
+    
+    @FXML
+    private RadioButton fxDonado;
+    
+    @FXML
+    private RadioButton fxModificado;
+
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
     }    
 
 }

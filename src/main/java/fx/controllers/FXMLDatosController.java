@@ -35,5 +35,11 @@ public class FXMLDatosController implements Initializable {
     public void clickVolver(){
         
     }
+
+    private FXMLPrincipalController principal;
+    
+    public void setPrincipal(FXMLPrincipalController principal) {
+        this.principal = principal;
+    }
     
 }
