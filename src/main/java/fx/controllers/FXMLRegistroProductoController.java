@@ -29,6 +29,10 @@ public class FXMLRegistroProductoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }  
+    
+    public void volver(){
+        principal.cargarPantallaOpciones();
+    }
 
 }

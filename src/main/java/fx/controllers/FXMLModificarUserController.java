@@ -1,19 +1,24 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package fx.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 
-public class FXMLPantallaUsuariosController implements Initializable {
+/**
+ * FXML Controller class
+ *
+ * @author Usuario
+ */
+public class FXMLModificarUserController implements Initializable {
 
-    @FXML
-    private Button fxRefresh;
-    @FXML
-    private Button fxDelete;
-    @FXML
-    private Button fxBack;
+    /**
+     * Initializes the controller class.
+     */
     
     private FXMLPrincipalController principal;
     
@@ -28,6 +33,6 @@ public class FXMLPantallaUsuariosController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
-
+    }    
+    
 }

@@ -36,6 +36,10 @@ public class FXMLPrincipalController implements Initializable {
     private FXMLRegistroProductoController registroProductoController;
     private AnchorPane pantallaRegistroUsuario;
     private FXMLRegistroUsuarioController registroUsuarioController;
+    private AnchorPane pantallaModificarDatos;
+    private FXMLModificarDatosController modificarDatosController;
+    private AnchorPane pantallaModificarUser;
+    private FXMLModificarUserController modificarUserController;
 
     //PRECARGA DE PANTALLAS
     @FXML
@@ -178,6 +182,38 @@ public class FXMLPrincipalController implements Initializable {
             Logger.getLogger(FXMLRegistroUsuarioController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    @FXML
+    public void precargarPantallaModificarDatos() {
+
+        try {
+            FXMLLoader loaderMenu = new FXMLLoader(
+                    getClass().getResource(
+                            "/fxml/FXMLModificarDatos.fxml"));
+            pantallaModificarDatos = loaderMenu.load();
+            modificarDatosController
+                    = loaderMenu.getController();
+            modificarDatosController.setPrincipal(this);
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLModificarDatosController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @FXML
+    public void precargarPantallaModificarUser() {
+
+        try {
+            FXMLLoader loaderMenu = new FXMLLoader(
+                    getClass().getResource(
+                            "/fxml/FXMLModificarUser.fxml"));
+            pantallaModificarUser = loaderMenu.load();
+            modificarUserController
+                    = loaderMenu.getController();
+            modificarUserController.setPrincipal(this);
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLModificarUserController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     //CARGAR PANTALLAS
     @FXML
@@ -228,6 +264,18 @@ public class FXMLPrincipalController implements Initializable {
         fxMenu.setVisible(true);
     }
     
+     @FXML
+    public void cargarPantallaModificarDatos() {
+        fxRoot.setCenter(pantallaModificarDatos);
+        fxMenu.setVisible(true);
+    }
+    
+     @FXML
+    public void cargarPantallaModificarUser() {
+        fxRoot.setCenter(pantallaModificarUser);
+        fxMenu.setVisible(true);
+    }
+    
     public void clickOpciones(){
         cargarPantallaOpciones();
         fxMenu.setVisible(true);
@@ -245,6 +293,8 @@ public class FXMLPrincipalController implements Initializable {
         precargarPantallaProducto();
         precargarPantallaRegistroUsuario();
         precargarPantallaUsuario();
+        precargarPantallaModificarDatos();
+        precargarPantallaModificarUser();
         cargarPantallaLogin();
 
     }

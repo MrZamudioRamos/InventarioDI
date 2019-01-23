@@ -51,7 +51,11 @@ public class FXMLRegistroLugarController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }  
+    
+    public void volver(){
+        principal.cargarPantallaOpciones();
+    }
 
     
 }

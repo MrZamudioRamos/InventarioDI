@@ -33,7 +33,7 @@ public class FXMLDatosController implements Initializable {
     }
     
     public void clickVolver(){
-        
+        principal.cargarPantallaOpciones();
     }
 
     private FXMLPrincipalController principal;

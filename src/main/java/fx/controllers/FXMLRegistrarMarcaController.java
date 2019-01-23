@@ -32,6 +32,9 @@ public class FXMLRegistrarMarcaController implements Initializable {
     public void clickCrear(){
         
     }
-
+    
+    public void volver(){
+        principal.cargarPantallaOpciones();
+    }
     
 }

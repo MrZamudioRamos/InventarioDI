@@ -7,6 +7,7 @@ package fx.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
@@ -26,7 +27,7 @@ public class FXMLMenuOpcionesController implements Initializable {
     }
     
     public void modificarProduct(){
-        principal.cargarPantallaProducto();
+        principal.cargarPantallaModificarDatos();
     }
 
     public void listarProduct() {
@@ -38,7 +39,7 @@ public class FXMLMenuOpcionesController implements Initializable {
     }
     
     public void modificarUser(){
-        principal.cargarPantallaRegistroUsuario();
+        principal.cargarPantallaModificarUser();
     }
 
     public void listarUser() {
@@ -50,7 +51,7 @@ public class FXMLMenuOpcionesController implements Initializable {
     }
     
     public void modificarLugar(){
-        principal.cargarPantallaLugar();
+        principal.cargarPantallaModificarDatos();
     }
 
     public void listarLugar() {
@@ -61,8 +62,12 @@ public class FXMLMenuOpcionesController implements Initializable {
         principal.cargarPantallaLugar();
     }
     
+    public void registrarMarca() {
+        principal.cargarPantallaMarca();
+    }
+    
     public void salir() {
-        principal.cargarPantallaLogin();
+        Platform.exit();
     }
     
     public void cerrarSesion() {
