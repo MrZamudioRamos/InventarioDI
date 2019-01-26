@@ -3,6 +3,7 @@ package dao.implementaciones;
 import dao.DAOTipoUsuario;
 import dao.DBConnectionPool;
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,7 +36,7 @@ public class DAOTipoUsuarioImpl implements DAOTipoUsuario {
 
     @Override
     public List<TipoUsuario> getAll() {
-        List<TipoUsuario> lista = null;
+        List<TipoUsuario> lista = new ArrayList<>();
         Connection con = null;
 
         try {

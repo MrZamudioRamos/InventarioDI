@@ -18,6 +18,7 @@ public class ConfiguracionYaml {
 
     }
 
+    
     public static ConfiguracionYaml getInstance() {
 
         if (config == null) {

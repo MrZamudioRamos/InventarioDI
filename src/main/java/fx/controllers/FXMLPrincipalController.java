@@ -54,11 +54,11 @@ public class FXMLPrincipalController implements Initializable {
     private AnchorPane pantallaModificarUser;
     private FXMLModificarUserController modificarUserController;
 
-    private ObservableList<Marca> marcas;
-    private ObservableList<Producto> productos;
-    private ObservableList<TipoUsuario> tipos;
-    private ObservableList<Ubicacion> ubicaciones;
-    private ObservableList<User> users;
+    private ObservableList<Marca> marcas = FXCollections.observableArrayList();
+    private ObservableList<Producto> productos = FXCollections.observableArrayList();
+    private ObservableList<TipoUsuario> tipos = FXCollections.observableArrayList();
+    private ObservableList<Ubicacion> ubicaciones = FXCollections.observableArrayList();
+    private ObservableList<User> users = FXCollections.observableArrayList();
 
     DAOMarcaImpl dm = new DAOMarcaImpl();
     DAOProductoImpl dp = new DAOProductoImpl();
@@ -108,6 +108,7 @@ public class FXMLPrincipalController implements Initializable {
     }
 
     //PRECARGA DE PANTALLAS
+    
     @FXML
     public void precargarPantallaLogin() {
 
@@ -326,6 +327,7 @@ public class FXMLPrincipalController implements Initializable {
 
     @FXML
     public void cargarPantallaRegistroUsuario() {
+        registroUsuarioController.mostrar();
         fxRoot.setCenter(pantallaRegistroUsuario);
         fxMenu.setVisible(true);
     }
@@ -359,7 +361,8 @@ public class FXMLPrincipalController implements Initializable {
         precargarPantallaUsuario();
         precargarPantallaModificarDatos();
         precargarPantallaModificarUser();
-        cargarPantallaLogin();
+        //cargarPantallaLogin();
+        cargarPantallaRegistroUsuario();
 
     }
 

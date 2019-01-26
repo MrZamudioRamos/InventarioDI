@@ -10,20 +10,24 @@ package model;
  * @author dam2
  */
 public class TipoUsuario {
-    private int idTipoUsuario;
+    private int idtipousuario;
     private String descripcion;
 
-    public TipoUsuario(int idTipoUsuario, String descripcion) {
-        this.idTipoUsuario = idTipoUsuario;
+    public TipoUsuario() {
+    }
+    
+
+    public TipoUsuario(int idtipousuario, String descripcion) {
+        this.idtipousuario = idtipousuario;
         this.descripcion = descripcion;
     }
 
     public int getIdTipoUsuario() {
-        return idTipoUsuario;
+        return idtipousuario;
     }
 
-    public void setIdTipoUsuario(int idTipoUsuario) {
-        this.idTipoUsuario = idTipoUsuario;
+    public void setIdTipoUsuario(int idtipousuario) {
+        this.idtipousuario = idtipousuario;
     }
 
     public String getDescripcion() {
@@ -36,7 +40,7 @@ public class TipoUsuario {
 
     @Override
     public String toString() {
-        return "TipoUsuario{" + "idTipoUsuario=" + idTipoUsuario + ", descripcion=" + descripcion + '}';
+        return "TipoUsuario{" + "idtipousuario=" + idtipousuario + ", descripcion=" + descripcion + '}';
     }
     
 }

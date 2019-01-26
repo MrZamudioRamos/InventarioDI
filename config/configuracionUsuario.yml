@@ -2,6 +2,6 @@
 ---
 
 driverDB: com.mysql.cj.jdbc.Driver
-urlDB: jdbc:mysql://dam2.mysql.iesquevedo.es:3335/itemshopdb_ricardo?zeroDateTimeBehavior=convertToNull
+urlDB: jdbc:mysql://dam2.mysql.iesquevedo.es:3335/ramos_inventario?zeroDateTimeBehavior=convertToNull
 userDB: root
 passDB: root

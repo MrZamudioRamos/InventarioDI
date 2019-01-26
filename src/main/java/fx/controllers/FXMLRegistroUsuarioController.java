@@ -1,13 +1,17 @@
 package fx.controllers;
 
+import dao.implementaciones.DAOTipoUsuarioImpl;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import model.TipoUsuario;
 
 /**
  * FXML Controller class
@@ -66,12 +70,19 @@ public class FXMLRegistroUsuarioController implements Initializable {
     @FXML
     private RadioButton fxModificado;
 
+    @FXML
+    private ComboBox<TipoUsuario> fxComboTipos ;
     
+    private List<TipoUsuario> usuarios  ;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
     }   
+    
+    public void mostrar(){
+        fxComboTipos.setItems(principal.getTipos());
+    }
     
     public void volver(){
         principal.cargarPantallaOpciones();
