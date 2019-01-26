@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.FXMLRegistroUsuarioController">
+<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.FXMLRegistroUsuarioController">
     
     <children>
       <TextField fx:id="fxNombre" layoutX="221.0" layoutY="90.0" prefHeight="0.0" prefWidth="291.0" />
@@ -28,21 +27,16 @@
       <Label layoutX="121.0" layoutY="226.0" prefHeight="25.0" prefWidth="63.0" text="E-mail" />
       <Label layoutX="112.0" layoutY="261.0" prefHeight="25.0" prefWidth="63.0" text="Contraseña" />
       <Label layoutX="121.0" layoutY="297.0" prefHeight="25.0" prefWidth="63.0" text="DNI" />
-      <Label layoutX="121.0" layoutY="345.0" prefHeight="25.0" prefWidth="80.0" text="Tipo Usuario" />
+      <Label layoutX="104.0" layoutY="345.0" prefHeight="25.0" prefWidth="80.0" text="Tipo Usuario" />
       <Label layoutX="121.0" layoutY="125.0" prefHeight="25.0" prefWidth="63.0" text="Apellidos" />
-      <RadioButton fx:id="fxAdministrador" layoutX="201.0" layoutY="349.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Administrador">
-         <toggleGroup>
-            <ToggleGroup fx:id="user" />
-         </toggleGroup></RadioButton>
-      <RadioButton fx:id="fxUsuarioNormal" layoutX="307.0" layoutY="349.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Usuario Normal" toggleGroup="$user" />
       <PasswordField fx:id="fxContrasenia" layoutX="221.0" layoutY="261.0" prefHeight="25.0" prefWidth="291.0" />
       <Label layoutX="215.0" layoutY="14.0" prefHeight="76.0" prefWidth="171.0" text="REGISTRO" textAlignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <RadioButton fx:id="fxInventariador" layoutX="427.0" layoutY="349.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Inventariador" toggleGroup="$user" />
-      <Button layoutX="367.0" layoutY="382.0" mnemonicParsing="false" onAction="#volver" prefHeight="59.0" prefWidth="147.0" text="VOLVER" />
-      <Button layoutX="179.0" layoutY="382.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="147.0" text="GUARDAR" />
+      <Button layoutX="402.0" layoutY="391.0" mnemonicParsing="false" onAction="#volver" prefHeight="59.0" prefWidth="147.0" text="VOLVER" />
+      <Button layoutX="111.0" layoutY="391.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="147.0" text="GUARDAR" />
+      <ComboBox fx:id="fxComboTipos" layoutX="226.0" layoutY="345.0" prefHeight="25.0" prefWidth="291.0" />
    </children>
 </AnchorPane>
