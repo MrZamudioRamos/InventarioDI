@@ -1,13 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao.implementaciones;
 
 import dao.DAOProducto;
+import dao.DBConnectionPool;
+import java.sql.Connection;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.Producto;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.ResultSetHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 
 public class DAOProductoImpl implements DAOProducto {
@@ -34,9 +36,27 @@ public class DAOProductoImpl implements DAOProducto {
 
     @Override
     public List<Producto> getAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        List<Producto> lista = null;
+        Connection con = null;
 
+        try {
+            con = DBConnectionPool.getInstance().getConnection();
+
+            QueryRunner qr = new QueryRunner();
+
+            ResultSetHandler<List<Producto>> handler = new BeanListHandler<>(Producto.class);
+
+            lista = qr.query(con, "SELECT * FROM producto", handler);
+
+        } catch (Exception ex) {
+            Logger.getLogger(DAOProductoImpl.class.getName()).log(Level.SEVERE, null, ex);
+
+        } finally {
+
+            DBConnectionPool.getInstance().cerrarConexion(con);
+        }
+        return lista;
+    }
     @Override
     public Producto obtener(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

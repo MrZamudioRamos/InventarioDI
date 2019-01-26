@@ -1,13 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao.implementaciones;
 
 import dao.DAOMarca;
+import dao.DBConnectionPool;
+import java.sql.Connection;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.Marca;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.ResultSetHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 
 public class DAOMarcaImpl implements DAOMarca {
@@ -34,7 +36,26 @@ public class DAOMarcaImpl implements DAOMarca {
 
     @Override
     public List<Marca> getAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Marca> lista = null;
+        Connection con = null;
+
+        try {
+            con = DBConnectionPool.getInstance().getConnection();
+
+            QueryRunner qr = new QueryRunner();
+
+            ResultSetHandler<List<Marca>> handler = new BeanListHandler<>(Marca.class);
+
+            lista = qr.query(con, "SELECT * FROM marca", handler);
+
+        } catch (Exception ex) {
+            Logger.getLogger(DAOMarcaImpl.class.getName()).log(Level.SEVERE, null, ex);
+
+        } finally {
+
+            DBConnectionPool.getInstance().cerrarConexion(con);
+        }
+        return lista;
     }
 
     @Override

@@ -5,12 +5,12 @@
  */
 package dao;
 
-import model.TipoUsuario;
+import model.TipoEstado;
 
 /**
  *
  * @author dam2
  */
-public interface DAOTipoEstado extends DAO<TipoUsuario>{
+public interface DAOTipoEstado extends DAO<TipoEstado>{
     
 }
