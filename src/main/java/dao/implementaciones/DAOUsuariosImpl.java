@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 import model.User;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 
@@ -21,7 +22,30 @@ public class DAOUsuariosImpl implements DAOUsuarios {
 
     @Override
     public int modificar(User a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection con = null;
+        int filas = -1;
+        try {
+            con = DBConnectionPool.getInstance().getConnection();
+
+            QueryRunner qr = new QueryRunner();
+
+            filas = qr.update(con,
+                    "UPDATE items set nombre = ?,  apellido = ?,  telefono= ?,  e-mail = ?,  password= ?,  dni = ?,  tipo= ? where idusuario=?",
+                    a.getNombre(),
+                    a.getApellido(),
+                    a.getTelefono(),
+                    a.getMail(),
+                    a.getPassword(),
+                    a.getDni(),
+                    a.getTipo(),
+                    a.getIdUsuario());
+
+        } catch (Exception ex) {
+            Logger.getLogger(DAOUsuariosImpl.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            DBConnectionPool.getInstance().cerrarConexion(con);
+        }
+        return filas;
     }
 
     @Override
@@ -60,7 +84,19 @@ public class DAOUsuariosImpl implements DAOUsuarios {
 
     @Override
     public User obtener(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        User usuarios = null;
+        Connection con = null;
+        try {
+            con = DBConnectionPool.getInstance().getConnection();
+            QueryRunner qr = new QueryRunner();
+            ResultSetHandler<User> handler = new BeanHandler<>(User.class);
+            usuarios = qr.query(con, "SELECT * FROM usuarios WHERE idusuario = ? ", handler, id);
+        } catch (Exception ex) {
+            Logger.getLogger(DAOUsuariosImpl.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            DBConnectionPool.getInstance().cerrarConexion(con);
+        }
+        return usuarios;
     }
     
 }

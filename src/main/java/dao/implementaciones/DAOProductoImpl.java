@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 import model.Producto;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 
@@ -21,7 +22,33 @@ public class DAOProductoImpl implements DAOProducto {
 
     @Override
     public int modificar(Producto a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection con = null;
+        int filas = -1;
+        try {
+            con = DBConnectionPool.getInstance().getConnection();
+
+            QueryRunner qr = new QueryRunner();
+
+            filas = qr.update(con,
+                    "UPDATE items set nombre = ?,  categoria = ?,  marca= ?,  modelo = ?,  descripcion= ?,  ubicacion = ?,  responsable= ?,  fecha_entrada= ?,  fecha_salida = ?,  estado= ? where idproducto=?",
+                    a.getNombre(),
+                    a.getCategoria(),
+                    a.getMarca(),
+                    a.getModelo(),
+                    a.getDescripcion(),
+                    a.getUbicacion(),
+                    a.getResponsable(),
+                    a.getFecha_entrada(),
+                    a.getFecha_salida(),
+                    a.getEstado(),
+                    a.getIdproducto());
+
+        } catch (Exception ex) {
+            Logger.getLogger(DAOProductoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            DBConnectionPool.getInstance().cerrarConexion(con);
+        }
+        return filas;
     }
 
     @Override
@@ -59,7 +86,19 @@ public class DAOProductoImpl implements DAOProducto {
     }
     @Override
     public Producto obtener(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Producto producto = null;
+        Connection con = null;
+        try {
+            con = DBConnectionPool.getInstance().getConnection();
+            QueryRunner qr = new QueryRunner();
+            ResultSetHandler<Producto> handler = new BeanHandler<>(Producto.class);
+            producto = qr.query(con, "SELECT * FROM producto WHERE idproducto = ? ", handler, id);
+        } catch (Exception ex) {
+            Logger.getLogger(DAOProductoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            DBConnectionPool.getInstance().cerrarConexion(con);
+        }
+        return producto;
     }
     
 }

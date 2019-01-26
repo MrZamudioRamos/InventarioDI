@@ -11,50 +11,42 @@ package model;
  */
 public class User {
 
-    private int idUsuario;
-    private String user;
+    private int idusuario;
     private String nombre;
     private String apellido;
     private String telefono;
     private String mail;
+    private String password;
     private String dni;
     private int tipo;
 
-    public User(int idUsuario, String user, String nombre, String apellido, String telefono, String mail, String dni, int tipo) {
-        this.idUsuario = idUsuario;
-        this.user = user;
+    public User(int idusuario, String nombre, String apellido, String telefono, String mail, String password, String dni, int tipo) {
+        this.idusuario = idusuario;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.mail = mail;
+        this.password=password;
         this.dni = dni;
         this.tipo = tipo;
     }
 
-    public User(String user, String nombre, String apellido, String telefono, String mail, String dni, int tipo) {
-        this.user = user;
+    public User(String nombre, String apellido, String telefono, String mail, String password, String dni, int tipo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.mail = mail;
+        this.password = password;
         this.dni = dni;
         this.tipo = tipo;
     }
 
     public int getIdUsuario() {
-        return idUsuario;
+        return idusuario;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
+    public void setIdUsuario(int idusuario) {
+        this.idusuario = idusuario;
     }
 
     public String getNombre() {
@@ -89,6 +81,14 @@ public class User {
         this.mail = mail;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getDni() {
         return dni;
     }
@@ -107,8 +107,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "idUsuario=" + idUsuario + ", user=" + user + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", mail=" + mail + ", dni=" + dni + ", tipo=" + tipo + '}';
-    }
-    
-    
+        return "User{" + "idusuario=" + idusuario + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", mail=" + mail + ", password=" + password + ", dni=" + dni + ", tipo=" + tipo + '}';
+    }  
+   
 }
