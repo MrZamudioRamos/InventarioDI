@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package dao.implementaciones;
 
+import dao.DAOTipoUsuario;
 import java.util.List;
 import model.TipoUsuario;
 
 
-public class DAOTipoEstadoImpl implements DAOTipoEstado {
+public class DAOTipoUsuarioImpl implements DAOTipoUsuario {
 
     @Override
     public int insertar(TipoUsuario a) {

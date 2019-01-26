@@ -3,41 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package dao.implementaciones;
 
+import dao.DAOTipoEstado;
 import java.util.List;
-import model.User;
+import model.TipoUsuario;
 
 
-public class DAOUsuariosImpl implements DAOUsuarios {
+public class DAOTipoEstadoImpl implements DAOTipoEstado {
 
     @Override
-    public int insertar(User a) {
+    public int insertar(TipoUsuario a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int modificar(User a) {
+    public int modificar(TipoUsuario a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int borrar(User a) {
+    public int borrar(TipoUsuario a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int borrarEntero(User a) {
+    public int borrarEntero(TipoUsuario a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<User> getAll() {
+    public List<TipoUsuario> getAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public User obtener(int id) {
+    public TipoUsuario obtener(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

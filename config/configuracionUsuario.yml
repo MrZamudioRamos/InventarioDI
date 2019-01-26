@@ -2,8 +2,6 @@
 ---
 
 driverDB: com.mysql.cj.jdbc.Driver
-urlDB: localhost:3306/inventario?serverTimeZone=UTC
+urlDB: jdbc:mysql://dam2.mysql.iesquevedo.es:3335/itemshopdb_ricardo?zeroDateTimeBehavior=convertToNull
 userDB: root
 passDB: root
-
-##migration wizard , database -ssql, connection odbc source, open odbc - sql native client 11, server - localhost, login pass , 

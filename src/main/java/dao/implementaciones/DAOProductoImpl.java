@@ -3,41 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package dao.implementaciones;
 
+import dao.DAOProducto;
 import java.util.List;
-import model.Marca;
+import model.Producto;
 
 
-public class DAOMarcaImpl implements DAOMarca {
+public class DAOProductoImpl implements DAOProducto {
 
     @Override
-    public int insertar(Marca a) {
+    public int insertar(Producto a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int modificar(Marca a) {
+    public int modificar(Producto a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int borrar(Marca a) {
+    public int borrar(Producto a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int borrarEntero(Marca a) {
+    public int borrarEntero(Producto a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Marca> getAll() {
+    public List<Producto> getAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Marca obtener(int id) {
+    public Producto obtener(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
