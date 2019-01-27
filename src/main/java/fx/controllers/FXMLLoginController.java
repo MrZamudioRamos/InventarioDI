@@ -5,10 +5,12 @@
  */
 package fx.controllers;
 
+import dao.implementaciones.DAOLoginImpl;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -37,12 +39,30 @@ public class FXMLLoginController implements Initializable {
     
         
     //variables Login
+    @FXML
     private TextField fxUsuario;
+    
+    @FXML
     private PasswordField fxContrasenia;
 
   
     public void clickEntrar() {
-        principal.cargarPantallaOpciones();
+        DAOLoginImpl li = new DAOLoginImpl();
+        
+        if (li.comprobarUser(fxUsuario.getText(), fxContrasenia.getText())) {
+                principal.cargarPantallaOpciones();
+        } else {
+            fxUsuario.clear();
+            fxContrasenia.clear();
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Usuario y/o contraseña incorrectos");
+
+            alert.showAndWait();
+        }
+        //principal.cargarPantallaOpciones();
     }
 
     @Override
