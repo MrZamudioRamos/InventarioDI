@@ -21,6 +21,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import model.Marca;
 import model.Producto;
+import model.TipoEstado;
 import model.TipoUsuario;
 import model.Ubicacion;
 import model.User;
@@ -59,6 +60,7 @@ public class FXMLPrincipalController implements Initializable {
     private ObservableList<TipoUsuario> tipos = FXCollections.observableArrayList();
     private ObservableList<Ubicacion> ubicaciones = FXCollections.observableArrayList();
     private ObservableList<User> users = FXCollections.observableArrayList();
+    private ObservableList<TipoEstado> estados = FXCollections.observableArrayList();
 
     DAOMarcaImpl dm = new DAOMarcaImpl();
     DAOProductoImpl dp = new DAOProductoImpl();
@@ -107,8 +109,15 @@ public class FXMLPrincipalController implements Initializable {
         this.users = users;
     }
 
+    public ObservableList<TipoEstado> getEstados() {
+        return estados = FXCollections.observableArrayList(de.getAll());
+    }
+
+    public void setEstados(ObservableList<TipoEstado> estados) {
+        this.estados = estados;
+    }
+
     //PRECARGA DE PANTALLAS
-    
     @FXML
     public void precargarPantallaLogin() {
 
@@ -361,9 +370,7 @@ public class FXMLPrincipalController implements Initializable {
         precargarPantallaUsuario();
         precargarPantallaModificarDatos();
         precargarPantallaModificarUser();
-        //cargarPantallaLogin();
-        cargarPantallaRegistroUsuario();
-
+        cargarPantallaLogin();
     }
 
 }
