@@ -16,22 +16,22 @@ public class Ubicacion {
     private int idubicacion;
     private String nombre;
     private String descripcion;
-    private LocalDate fechecreacion;
+    private LocalDate fechacreacion;
 
     public Ubicacion() {
     }
 
-    public Ubicacion(int idubicacion, String nombre, String descripcion, LocalDate fechecreacion) {
+    public Ubicacion(int idubicacion, String nombre, String descripcion, LocalDate fechacreacion) {
         this.idubicacion = idubicacion;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.fechecreacion = fechecreacion;
+        this.fechacreacion = fechacreacion;
     }
 
-    public Ubicacion(String nombre, String descripcion, LocalDate fechecreacion) {
+    public Ubicacion(String nombre, String descripcion, LocalDate fechacreacion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.fechecreacion = fechecreacion;
+        this.fechacreacion = fechacreacion;
     }
 
     public int getIdubicacion() {
@@ -59,16 +59,16 @@ public class Ubicacion {
     }
 
     public LocalDate getFechecreacion() {
-        return fechecreacion;
+        return fechacreacion;
     }
 
-    public void setFechecreacion(LocalDate fechecreacion) {
-        this.fechecreacion = fechecreacion;
+    public void setFechecreacion(LocalDate fechacreacion) {
+        this.fechacreacion = fechacreacion;
     }
 
     @Override
     public String toString() {
-        return "Ubicacion{" + "idubicacion=" + idubicacion + ", nombre=" + nombre + ", descripcion=" + descripcion + ", fechecreacion=" + fechecreacion + '}';
+        return "Ubicacion{" + "idubicacion=" + idubicacion + ", nombre=" + nombre + ", descripcion=" + descripcion + ", fechacreacion=" + fechacreacion + '}';
     }
 
 }

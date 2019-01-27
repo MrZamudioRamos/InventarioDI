@@ -12,11 +12,11 @@
 <AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="961.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.FXMLDatosController">
 
     <children>
-      <TabPane layoutX="41.0" layoutY="99.0">
+      <TabPane layoutX="41.0" layoutY="99.0" style="-fx-background-color: blue;">
          <tabs>
             <Tab fx:id="fxProductos" text="Productos">
                <content>
-                  <TableView fx:id="fxTableProductos" prefHeight="329.0" prefWidth="816.0">
+                  <TableView fx:id="fxTableProductos" prefHeight="329.0" prefWidth="816.0" style="-fx-background-color: orange;">
                     <columns>
                       <TableColumn fx:id="fxId" prefWidth="89.0" text="ID_PRODUCTO" />
                       <TableColumn fx:id="fxNombre" prefWidth="76.0" text="NOMBRE" />
@@ -31,7 +31,7 @@
             </Tab>
             <Tab text="Lugares">
                <content>
-                  <TableView fx:id="fxTableUbicaciones" prefHeight="342.0" prefWidth="909.0">
+                  <TableView fx:id="fxTableUbicaciones" prefHeight="342.0" prefWidth="909.0" style="-fx-background-color: red;">
                      <columns>
                         <TableColumn fx:id="fxIdLugar" prefWidth="165.0" text="ID_LUGAR" />
                         <TableColumn fx:id="fxNombreLugar" minWidth="0.0" prefWidth="119.0" text="NOMBRE" />
@@ -42,7 +42,7 @@
             </Tab>
             <Tab text="Marcas">
                <content>
-                  <TableView fx:id="fxTableMarcas" prefHeight="342.0" prefWidth="909.0">
+                  <TableView fx:id="fxTableMarcas" prefHeight="342.0" prefWidth="909.0" style="-fx-background-color: blue;">
                      <columns>
                         <TableColumn fx:id="fxIdMarca" prefWidth="165.0" text="ID_MARCA" />
                         <TableColumn fx:id="fxNombreMarca" minWidth="0.0" prefWidth="256.0" text="NOMBRE" />
@@ -53,13 +53,13 @@
             </Tab>
          </tabs>
       </TabPane>
-      <Button layoutX="168.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="72.0" prefWidth="158.0" text="DAR DE BAJA" />
-      <Button layoutX="437.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickActualizar" prefHeight="72.0" prefWidth="158.0" text="ACTUALIZAR" />
+      <Button layoutX="168.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="72.0" prefWidth="158.0" style="-fx-background-color: black; -fx-font-color: white;" text="DAR DE BAJA" textFill="WHITE" />
+      <Button layoutX="437.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickActualizar" prefHeight="72.0" prefWidth="158.0" style="-fx-background-color: black;" text="ACTUALIZAR" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="44.0" prefHeight="29.0" prefWidth="85.0" text="DATOS:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Button layoutX="672.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickVolver" prefHeight="72.0" prefWidth="158.0" text="VOLVER" />
+      <Button layoutX="672.0" layoutY="508.0" mnemonicParsing="false" onAction="#clickVolver" prefHeight="72.0" prefWidth="158.0" style="-fx-background-color: black;" text="VOLVER" textFill="WHITE" />
    </children>
 </AnchorPane>

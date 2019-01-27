@@ -305,6 +305,8 @@ public class FXMLPrincipalController implements Initializable {
     //CARGAR PANTALLAS
     @FXML
     public void cargarPantallaLogin() {
+        fxRoot.setMinHeight(532);
+        fxRoot.setMinWidth(582);
         fxRoot.setCenter(pantallaLogin);
         fxMenu.setVisible(false);
     }

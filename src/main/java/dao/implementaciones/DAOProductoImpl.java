@@ -30,7 +30,7 @@ public class DAOProductoImpl implements DAOProducto {
             QueryRunner qr = new QueryRunner();
 
             filas = qr.update(con,
-                    "UPDATE items set nombre = ?,  categoria = ?,  marca= ?,  modelo = ?,  descripcion= ?,  ubicacion = ?,  responsable= ?,  fecha_entrada= ?,  fecha_salida = ?,  estado= ? where idproducto=?",
+                    "UPDATE producto set nombre = ?,  categoria = ?,  marca= ?,  modelo = ?,  descripcion= ?,  ubicacion = ?,  responsable= ?,  fecha_entrada= ?,  fecha_salida = ?,  estado= ? where idproducto=?",
                     a.getNombre(),
                     a.getCategoria(),
                     a.getMarca(),

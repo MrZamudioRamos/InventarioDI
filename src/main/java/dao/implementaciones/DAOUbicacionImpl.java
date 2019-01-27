@@ -27,7 +27,7 @@ public class DAOUbicacionImpl implements DAOUbicacion {
             QueryRunner qr = new QueryRunner();
 
             Number id = qr.insert(con,
-                    "INSERT INTO items (nombre, descripcion, fechacreacion) VALUES(?,?,?)",
+                    "INSERT INTO ubicacion (nombre, descripcion, fechacreacion) VALUES(?,?,?)",
                     new ScalarHandler<>(),
                     a.getNombre(),
                     a.getDescripcion(),
@@ -65,7 +65,7 @@ public class DAOUbicacionImpl implements DAOUbicacion {
             QueryRunner qr = new QueryRunner();
 
             filas = qr.update(con,
-                    "UPDATE items set nombre = ?,  descripcion = ?,  fechacreacion= ? where idubicacion=?",
+                    "UPDATE ubicacion set nombre = ?,  descripcion = ?,  fechacreacion= ? where idubicacion=?",
                     a.getNombre(),
                     a.getDescripcion(),
                     a.getFechecreacion(),
