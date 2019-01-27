@@ -60,7 +60,7 @@ public class FXMLRegistroLugarController implements Initializable {
         Ubicacion ubicacion;
         int lineas;
         
-        if (fxNombre.getText().equals("")) {
+        if (fxNombre.getText().equals("") || fxDescripcion.getText().equals("") || fxFecha.getValue() != null) {
             alertWarning.setContentText("No hay datos");
             alertWarning.showAndWait();
         }else{
