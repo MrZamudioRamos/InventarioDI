@@ -6,6 +6,7 @@
 package model;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -16,16 +17,16 @@ public class Ubicacion {
     private int idubicacion;
     private String nombre;
     private String descripcion;
-    private Date fechecreacion;
+    private LocalDate fechecreacion;
 
-    public Ubicacion(int idubicacion, String nombre, String descripcion, Date fechecreacion) {
+    public Ubicacion(int idubicacion, String nombre, String descripcion, LocalDate fechecreacion) {
         this.idubicacion = idubicacion;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechecreacion = fechecreacion;
     }
 
-    public Ubicacion(String nombre, String descripcion, Date fechecreacion) {
+    public Ubicacion(String nombre, String descripcion, LocalDate fechecreacion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechecreacion = fechecreacion;
@@ -55,11 +56,11 @@ public class Ubicacion {
         this.descripcion = descripcion;
     }
 
-    public Date getFechecreacion() {
+    public LocalDate getFechecreacion() {
         return fechecreacion;
     }
 
-    public void setFechecreacion(Date fechecreacion) {
+    public void setFechecreacion(LocalDate fechecreacion) {
         this.fechecreacion = fechecreacion;
     }
 
