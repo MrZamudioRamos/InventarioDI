@@ -29,6 +29,8 @@ public class FXMLLoginController implements Initializable {
 
     private Stage myStage;
     
+    private String usuario;
+    
     private FXMLPrincipalController principal;
     
     public void setPrincipal(FXMLPrincipalController principal) {
@@ -36,8 +38,15 @@ public class FXMLLoginController implements Initializable {
     }
     
     //MÉTODOS
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }  
     
-        
     //variables Login
     @FXML
     private TextField fxUsuario;
@@ -50,7 +59,8 @@ public class FXMLLoginController implements Initializable {
         DAOLoginImpl li = new DAOLoginImpl();
         
         if (li.comprobarUser(fxUsuario.getText(), fxContrasenia.getText())) {
-                principal.cargarPantallaOpciones();
+            principal.setUser(fxUsuario.getText());
+            principal.cargarPantallaOpciones();
         } else {
             fxUsuario.clear();
             fxContrasenia.clear();
@@ -73,5 +83,4 @@ public class FXMLLoginController implements Initializable {
     public void check(){
         
     }
-
 }

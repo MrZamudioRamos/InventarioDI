@@ -33,6 +33,17 @@ public class FXMLPrincipalController implements Initializable {
 
     @FXML
     private MenuBar fxMenu;
+    
+    @FXML
+    private String user;
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
 
     private AnchorPane pantallaLogin;
     private FXMLLoginController logincontroller;
@@ -300,7 +311,6 @@ public class FXMLPrincipalController implements Initializable {
 
     @FXML
     public void cargarPantallaDatos() {
-        datosController.mostrar();
         fxRoot.setCenter(pantallaDatos);
         fxMenu.setVisible(true);
     }
@@ -308,6 +318,7 @@ public class FXMLPrincipalController implements Initializable {
     @FXML
     public void cargarPantallaOpciones() {
         fxRoot.setCenter(pantallaOpciones);
+        opcionesController.setLogin(this.getUser().toUpperCase());
         fxMenu.setVisible(true);
     }
 
@@ -372,8 +383,7 @@ public class FXMLPrincipalController implements Initializable {
         precargarPantallaUsuario();
         precargarPantallaModificarDatos();
         precargarPantallaModificarUser();
-//        cargarPantallaLogin();
-        cargarPantallaOpciones();
+        cargarPantallaLogin();
     }
 
 }

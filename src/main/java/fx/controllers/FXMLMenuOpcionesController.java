@@ -12,13 +12,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 public class FXMLMenuOpcionesController implements Initializable {
     
     public void setMyStage(Stage myStage) {
         this.myStage = myStage;
     }
 
+    private FXMLLoginController login;
+    
     private Stage myStage;
+    
+    @FXML
+    private String log;
     
     private FXMLPrincipalController principal;
 
@@ -71,7 +77,7 @@ public class FXMLMenuOpcionesController implements Initializable {
     }
     
     public void cerrarSesion() {
-        principal.cargarPantallaLogin();
+        //principal.cargarPantallaLogin();
     }
   
     @FXML
@@ -96,14 +102,18 @@ public class FXMLMenuOpcionesController implements Initializable {
     private Button fxCloseSession;
     @FXML
     private Button fxExit;
-    
+    @FXML
+    private Label fxNombreUser;
 
+    public void setLogin(String login) {
+        this.log = login;
+        fxNombreUser.setText(log);
+    }
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
 
 }
