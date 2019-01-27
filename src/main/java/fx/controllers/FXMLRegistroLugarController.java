@@ -25,50 +25,45 @@ public class FXMLRegistroLugarController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    
     private FXMLPrincipalController principal;
-    
+
     public void setPrincipal(FXMLPrincipalController principal) {
         this.principal = principal;
     }
-    
+
     @FXML
     private TextField fxNombre;
-    
+
     @FXML
     private TextField fxDescripcion;
-    
+
     @FXML
     private DatePicker fxFecha;
-    
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }  
-    
-    public void volver(){
+    }
+
+    public void volver() {
         principal.cargarPantallaOpciones();
     }
-    
+
     private Alert alertWarning;
     private Alert alertInfo;
     private Alert alertError;
-    
-    public void GuardarLugar(){
-    
+
+    public void GuardarLugar() {
+
         Ubicacion ubicacion;
         int lineas;
-        
-        if (fxNombre.getText().equals("") || fxDescripcion.getText().equals("") || fxFecha.getValue() != null) {
-            alertWarning.setContentText("No hay datos");
-            alertWarning.showAndWait();
-        }else{
-        
+
+        if (!fxNombre.getText().equals("") && !fxDescripcion.getText().equals("") && fxFecha.getValue() != null) {
+
             ubicacion = new Ubicacion(fxNombre.getText(), fxDescripcion.getText(), fxFecha.getValue());
             DAOUbicacionImpl dup = new DAOUbicacionImpl();
             lineas = dup.insertar(ubicacion);
-            
+
             if (lineas < 0) {
                 alertInfo.setContentText("Ubicación creada.");
                 alertInfo.showAndWait();
@@ -80,11 +75,12 @@ public class FXMLRegistroLugarController implements Initializable {
                 alertError.setContentText("No se ha podido crear la ubicación.");
                 alertError.showAndWait();
             }
-        
+        } else {
+            alertWarning.setContentText("No hay datos");
+            alertWarning.showAndWait();
+
         }
-    
-    
+
     }
 
-    
 }
