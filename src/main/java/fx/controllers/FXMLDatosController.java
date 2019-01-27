@@ -115,6 +115,7 @@ public class FXMLDatosController implements Initializable {
     }
 
     public void clickEliminar() {
+
         if (fxTableProductos.getSelectionModel().getSelectedItem() != null) {
 
             Producto producto = fxTableProductos.getSelectionModel().getSelectedItem();
@@ -138,6 +139,7 @@ public class FXMLDatosController implements Initializable {
             DAOUbicacionImpl dao = new DAOUbicacionImpl();
 
             dao.borrar(ub);
+
         } else {
 
             alertInfo.setContentText("Seleccione un producto o una marca o un lugar.");
@@ -148,7 +150,36 @@ public class FXMLDatosController implements Initializable {
     }
 
     public void clickActualizar() {
+        if (fxTableProductos.getSelectionModel().getSelectedItem() != null) {
 
+            Producto producto = fxTableProductos.getSelectionModel().getSelectedItem();
+
+            DAOProductoImpl dao = new DAOProductoImpl();
+
+            dao.modificar(producto);
+
+        } else if (fxTableMarcas.getSelectionModel().getSelectedItem() != null) {
+
+            Marca marca = fxTableMarcas.getSelectionModel().getSelectedItem();
+
+            DAOMarcaImpl dao = new DAOMarcaImpl();
+
+            dao.modificar(marca);
+
+        } else if (fxTableUbicaciones.getSelectionModel().getSelectedItem() != null) {
+
+            Ubicacion ub = fxTableUbicaciones.getSelectionModel().getSelectedItem();
+
+            DAOUbicacionImpl dao = new DAOUbicacionImpl();
+
+            dao.modificar(ub);
+
+        } else {
+
+            alertInfo.setContentText("Seleccione un producto o una marca o un lugar.");
+            alertInfo.showAndWait();
+
+        }
     }
 
     public void clickVolver() {

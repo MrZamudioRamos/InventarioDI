@@ -311,6 +311,7 @@ public class FXMLPrincipalController implements Initializable {
 
     @FXML
     public void cargarPantallaDatos() {
+        datosController.mostrar();
         fxRoot.setCenter(pantallaDatos);
         fxMenu.setVisible(true);
     }
