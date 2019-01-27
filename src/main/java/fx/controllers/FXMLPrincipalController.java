@@ -330,6 +330,7 @@ public class FXMLPrincipalController implements Initializable {
 
     @FXML
     public void cargarPantallaProducto() {
+        registroProductoController.mostrar();
         fxRoot.setCenter(pantallaRegistroProducto);
         fxMenu.setVisible(true);
     }

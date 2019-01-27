@@ -15,6 +15,10 @@ public class Marca {
     private String nombre;
     private String descripcion;
 
+    public Marca() {
+    }
+    
+
     public Marca(int idmarca, String nombre, String descripcion) {
         this.idmarca = idmarca;
         this.nombre = nombre;

@@ -25,6 +25,9 @@ public class Producto {
     private LocalDate fecha_salida;
     private int estado;
 
+    public Producto() {
+    }
+
     public Producto(int idproducto, String nombre, String categoria, int marca, String modelo, String descripcion, int ubicacion, int responsable, LocalDate fecha_entrada, LocalDate fecha_salida, int estado) {
         this.idproducto = idproducto;
         this.nombre = nombre;

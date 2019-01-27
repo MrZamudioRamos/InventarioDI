@@ -70,7 +70,7 @@ public class DAOUsuariosImpl implements DAOUsuarios {
 
             ResultSetHandler<List<User>> handler = new BeanListHandler<>(User.class);
 
-            lista = qr.query(con, "SELECT * FROM user", handler);
+            lista = qr.query(con, "SELECT * FROM usuarios", handler);
 
         } catch (Exception ex) {
             Logger.getLogger(DAOUsuariosImpl.class.getName()).log(Level.SEVERE, null, ex);

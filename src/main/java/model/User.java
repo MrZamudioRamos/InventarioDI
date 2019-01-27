@@ -20,13 +20,16 @@ public class User {
     private String dni;
     private int tipo;
 
+    public User() {
+    }
+
     public User(int idusuario, String nombre, String apellido, String telefono, String mail, String password, String dni, int tipo) {
         this.idusuario = idusuario;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.mail = mail;
-        this.password=password;
+        this.password = password;
         this.dni = dni;
         this.tipo = tipo;
     }
@@ -108,6 +111,6 @@ public class User {
     @Override
     public String toString() {
         return "User{" + "idusuario=" + idusuario + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", mail=" + mail + ", password=" + password + ", dni=" + dni + ", tipo=" + tipo + '}';
-    }  
-   
+    }
+
 }

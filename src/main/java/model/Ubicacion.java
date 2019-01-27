@@ -18,6 +18,9 @@ public class Ubicacion {
     private String descripcion;
     private LocalDate fechecreacion;
 
+    public Ubicacion() {
+    }
+
     public Ubicacion(int idubicacion, String nombre, String descripcion, LocalDate fechecreacion) {
         this.idubicacion = idubicacion;
         this.nombre = nombre;
