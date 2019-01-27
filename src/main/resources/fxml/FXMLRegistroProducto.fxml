@@ -28,7 +28,7 @@
       <Label layoutX="121.0" layoutY="214.0" prefHeight="25.0" prefWidth="63.0" text="Descripción" />
       <Label layoutX="121.0" layoutY="247.0" prefHeight="25.0" prefWidth="63.0" text="Ubicación" />
       <Label layoutX="112.0" layoutY="279.0" prefHeight="25.0" prefWidth="80.0" text="Responsable" />
-      <Label layoutX="104.0" layoutY="396.0" prefHeight="25.0" prefWidth="80.0" text="Estado" />
+      <Label layoutX="121.0" layoutY="429.0" prefHeight="25.0" prefWidth="80.0" text="Estado" />
       <Label layoutX="121.0" layoutY="114.0" prefHeight="25.0" prefWidth="63.0" text="Categoría" />
       <Label layoutX="275.0" layoutY="22.0" prefHeight="53.0" prefWidth="161.0" text="Producto:" textAlignment="CENTER">
          <font>
@@ -41,9 +41,11 @@
       <Label layoutX="121.0" layoutY="320.0" prefHeight="25.0" prefWidth="63.0" text="F-Entrada" />
       <ComboBox fx:id="fxMarca" layoutX="210.0" layoutY="146.0" prefHeight="25.0" prefWidth="291.0" />
       <ComboBox fx:id="fxResponsable" layoutX="210.0" layoutY="279.0" prefHeight="25.0" prefWidth="291.0" />
-      <Button layoutX="373.0" layoutY="441.0" mnemonicParsing="false" onAction="#volver" prefHeight="53.0" prefWidth="127.0" text="VOLVER" />
-      <Button layoutX="205.0" layoutY="441.0" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="53.0" prefWidth="127.0" text="GUARDAR" />
+      <Button layoutX="83.0" layoutY="476.0" mnemonicParsing="false" onAction="#volver" prefHeight="25.0" prefWidth="140.0" text="VOLVER" />
+      <Button layoutX="470.0" layoutY="476.0" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="25.0" prefWidth="127.0" text="GUARDAR" />
       <ComboBox fx:id="fxUbicacion" layoutX="210.0" layoutY="247.0" prefHeight="25.0" prefWidth="291.0" />
-      <ComboBox fx:id="fxEstado" layoutX="210.0" layoutY="396.0" prefHeight="25.0" prefWidth="291.0" />
+      <ComboBox fx:id="fxEstado" layoutX="210.0" layoutY="429.0" prefHeight="25.0" prefWidth="291.0" />
+      <TextField fx:id="fxPrecio" layoutX="210.0" layoutY="393.0" prefHeight="25.0" prefWidth="117.0" />
+      <Label layoutX="121.0" layoutY="393.0" prefHeight="25.0" prefWidth="80.0" text="Precio" />
    </children>
 </AnchorPane>
