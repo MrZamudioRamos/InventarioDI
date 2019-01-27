@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
-/**
- *
- * @author dam2
- */
 public class User {
 
     private int idusuario;
@@ -20,9 +11,8 @@ public class User {
     private String dni;
     private int tipo;
 
-    public User() {
-    }
-
+    public User(){}
+    
     public User(int idusuario, String nombre, String apellido, String telefono, String mail, String password, String dni, int tipo) {
         this.idusuario = idusuario;
         this.nombre = nombre;
