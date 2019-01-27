@@ -5,7 +5,7 @@
  */
 package model;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -21,11 +21,11 @@ public class Producto {
     private String descripcion;
     private int ubicacion;
     private int responsable;
-    private Date fecha_entrada;
-    private Date fecha_salida;
+    private LocalDate fecha_entrada;
+    private LocalDate fecha_salida;
     private int estado;
 
-    public Producto(int idproducto, String nombre, String categoria, int marca, String modelo, String descripcion, int ubicacion, int responsable, Date fecha_entrada, Date fecha_salida, int estado) {
+    public Producto(int idproducto, String nombre, String categoria, int marca, String modelo, String descripcion, int ubicacion, int responsable, LocalDate fecha_entrada, LocalDate fecha_salida, int estado) {
         this.idproducto = idproducto;
         this.nombre = nombre;
         this.categoria = categoria;
@@ -39,7 +39,7 @@ public class Producto {
         this.estado = estado;
     }
 
-    public Producto(String nombre, String categoria, int marca, String modelo, String descripcion, int ubicacion, int responsable, Date fecha_entrada, Date fecha_salida, int estado) {
+    public Producto(String nombre, String categoria, int marca, String modelo, String descripcion, int ubicacion, int responsable, LocalDate fecha_entrada, LocalDate fecha_salida, int estado) {
         this.nombre = nombre;
         this.categoria = categoria;
         this.marca = marca;
@@ -116,19 +116,19 @@ public class Producto {
         this.responsable = responsable;
     }
 
-    public Date getFecha_entrada() {
+    public LocalDate getFecha_entrada() {
         return fecha_entrada;
     }
 
-    public void setFecha_entrada(Date fecha_entrada) {
+    public void setFecha_entrada(LocalDate fecha_entrada) {
         this.fecha_entrada = fecha_entrada;
     }
 
-    public Date getFecha_salida() {
+    public LocalDate getFecha_salida() {
         return fecha_salida;
     }
 
-    public void setFecha_salida(Date fecha_salida) {
+    public void setFecha_salida(LocalDate fecha_salida) {
         this.fecha_salida = fecha_salida;
     }
 
