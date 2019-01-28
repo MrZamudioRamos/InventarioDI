@@ -67,9 +67,9 @@ public class FXMLRegistroUsuarioController implements Initializable {
         if (!fxNombre.getText().equals("")
                 && !fxApellidos.getText().equals("")
                 && !fxTelefono.getText().equals("")
-                && fxMail.getText().equals("")
-                && fxContrasenia.getText().equals("")
-                && fxDni.getText().equals("")
+                && !fxMail.getText().equals("")
+                && !fxContrasenia.getText().equals("")
+                && !fxDni.getText().equals("")
                 && fxComboTipos.getSelectionModel().getSelectedItem() != null) {
 
             usuario = new User(fxNombre.getText(),

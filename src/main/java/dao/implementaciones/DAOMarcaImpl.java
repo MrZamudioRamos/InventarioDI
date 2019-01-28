@@ -164,5 +164,5 @@ public class DAOMarcaImpl implements DAOMarca {
         }
         return marca;
     }
-    
+
 }

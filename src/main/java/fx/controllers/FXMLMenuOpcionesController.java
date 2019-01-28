@@ -77,7 +77,7 @@ public class FXMLMenuOpcionesController implements Initializable {
     }
     
     public void cerrarSesion() {
-        //principal.cargarPantallaLogin();
+        principal.cargarPantallaLogin();
     }
   
     @FXML

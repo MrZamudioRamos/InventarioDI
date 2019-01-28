@@ -33,7 +33,7 @@ public class FXMLPrincipalController implements Initializable {
 
     @FXML
     private MenuBar fxMenu;
-    
+
     @FXML
     private String user;
 
@@ -305,14 +305,16 @@ public class FXMLPrincipalController implements Initializable {
     //CARGAR PANTALLAS
     @FXML
     public void cargarPantallaLogin() {
-        fxRoot.setMinHeight(532);
-        fxRoot.setMinWidth(582);
+
         fxRoot.setCenter(pantallaLogin);
         fxMenu.setVisible(false);
+        fxRoot.setMaxHeight(400);
+        fxRoot.setMaxWidth(600);
     }
 
     @FXML
     public void cargarPantallaDatos() {
+        datosController.vaciar();
         datosController.mostrar();
         fxRoot.setCenter(pantallaDatos);
         fxMenu.setVisible(true);
@@ -327,6 +329,7 @@ public class FXMLPrincipalController implements Initializable {
 
     @FXML
     public void cargarPantallaUsuario() {
+        usuarioController.mostrar();
         fxRoot.setCenter(pantallaUsuario);
         fxMenu.setVisible(true);
     }

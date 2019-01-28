@@ -106,6 +106,12 @@ public class FXMLDatosController implements Initializable {
         this.ubicacion = ubicacion;
     }
 
+    public void vaciar() {
+        fxTableProductos.getItems().clear();
+        fxTableUbicaciones.getItems().clear();
+        fxTableMarcas.getItems().clear();
+    }
+
     public void mostrar() {
 
         fxTableProductos.getItems().addAll(principal.getProductos());
@@ -185,7 +191,7 @@ public class FXMLDatosController implements Initializable {
         } else if (fxTableMarcas.getSelectionModel().getSelectedItem() != null) {
 
             marca = fxTableMarcas.getSelectionModel().getSelectedItem();
-            
+
             principal.cargarPantallaModificarDatos();
 
         } else if (fxTableUbicaciones.getSelectionModel().getSelectedItem() != null) {

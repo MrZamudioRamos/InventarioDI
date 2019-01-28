@@ -42,7 +42,10 @@ public class FXMLRegistroLugarController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        // TODOa
+        alertWarning = new Alert(Alert.AlertType.WARNING);
+        alertInfo = new Alert(Alert.AlertType.INFORMATION);
+        alertError = new Alert(Alert.AlertType.ERROR);
     }
 
     public void volver() {

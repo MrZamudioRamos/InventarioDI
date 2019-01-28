@@ -3,6 +3,7 @@ package dao.implementaciones;
 import dao.DAOUsuarios;
 import dao.DBConnectionPool;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,13 +12,49 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
-
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 public class DAOUsuariosImpl implements DAOUsuarios {
 
     @Override
     public int insertar(User a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection con = null;
+        int filas = -1;
+        try {
+            con = DBConnectionPool.getInstance().getConnection();
+            con.setAutoCommit(false);
+            QueryRunner qr = new QueryRunner();
+
+            Number id = qr.insert(con,
+                    "INSERT INTO usuarios (nombre, apellido, telefono, mail, password, dni, tipo) VALUES(?,?,?,?,?,?,?)",
+                    new ScalarHandler<>(),
+                    a.getNombre(),
+                    a.getApellido(),
+                    a.getTelefono(),
+                    a.getMail(), a.getPassword(),
+                    a.getDni(),
+                    a.getTipo());
+
+            a.setIdUsuario(id.intValue());
+            con.commit();
+
+        } catch (SQLException ex) {
+            filas = -2;
+            try {
+                Logger.getLogger(DAOMarcaImpl.class.getName()).log(Level.SEVERE, null, ex);
+                if (con != null) {
+                    con.rollback();
+                }
+            } catch (SQLException ex1) {
+                Logger.getLogger(DAOMarcaImpl.class.getName()).log(Level.SEVERE, null, ex1);
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(DAOMarcaImpl.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            DBConnectionPool.getInstance().cerrarConexion(con);
+        }
+
+        return filas;
     }
 
     @Override
@@ -98,5 +135,5 @@ public class DAOUsuariosImpl implements DAOUsuarios {
         }
         return usuarios;
     }
-    
+
 }
